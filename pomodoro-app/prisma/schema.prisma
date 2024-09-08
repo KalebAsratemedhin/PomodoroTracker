@@ -14,7 +14,7 @@ datasource db {
 }
 
 model User {
-  id        Int      @id @default(autoincrement())
+  id        String   @id @default(uuid())
   email     String   @unique
   password  String
   tasks     Task[]
@@ -26,6 +26,6 @@ model Task {
   description   String?
   completed     Boolean  @default(false)
   pomodoroCount Int      @default(0)
-  userId        Int
+  userId        String
   user          User     @relation(fields: [userId], references: [id])
 }

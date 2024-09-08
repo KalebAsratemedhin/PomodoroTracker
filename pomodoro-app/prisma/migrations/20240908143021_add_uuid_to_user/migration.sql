@@ -1,6 +1,6 @@
 -- CreateTable
 CREATE TABLE "User" (
-    "id" SERIAL NOT NULL,
+    "id" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "password" TEXT NOT NULL,
 
@@ -14,7 +14,7 @@ CREATE TABLE "Task" (
     "description" TEXT,
     "completed" BOOLEAN NOT NULL DEFAULT false,
     "pomodoroCount" INTEGER NOT NULL DEFAULT 0,
-    "userId" INTEGER NOT NULL,
+    "userId" TEXT NOT NULL,
 
     CONSTRAINT "Task_pkey" PRIMARY KEY ("id")
 );
